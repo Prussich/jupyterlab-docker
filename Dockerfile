@@ -1,5 +1,5 @@
 
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -23,8 +23,8 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 # Installs node.js, python, pip and setup tools
 RUN apt-get install -y \
     python3.6 \
-    python3-pip \
-    python3-setuptools \
+    #python3-pip \
+    #python3-setuptools \
     nodejs \
     build-essential \
     libzmq3-dev \
@@ -37,8 +37,8 @@ RUN apt-get install -y \
     ffmpeg \
     graphviz
 
-# Upgrade pip
-RUN pip3 install --upgrade pip
+RUN python3 -m pip install
+RUN python3 -m setuptools install
 
 # Upgrade npm
 RUN npm install npm@latest -g
