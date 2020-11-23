@@ -23,8 +23,8 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 # Installs node.js, python, pip and setup tools
 RUN apt-get install -y \
     python3.6 \
-    #python3-pip \
-    #python3-setuptools \
+    python3-pip \
+    python3-setuptools \
     nodejs \
     build-essential \
     libzmq3-dev \
@@ -36,9 +36,6 @@ RUN apt-get install -y \
     libxrender-dev \
     ffmpeg \
     graphviz
-
-RUN python3 -m pip install
-RUN python3 -m setuptools install
 
 # Upgrade npm
 RUN npm install npm@latest -g
