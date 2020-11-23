@@ -66,6 +66,8 @@ ENTRYPOINT jupyter lab --no-browser --ip=* --port=9000 --allow-root --notebook-d
 # Install jupyter notebook
 RUN pip3 install \
   setuptools==41.0.0 \
+  tensorflow-cpu==1.15 \
+  keras==2.2.5 \
   librosa \
   matplotlib \
   opencv-python \
