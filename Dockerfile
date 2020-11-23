@@ -22,9 +22,9 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 # Installs node.js, python, pip and setup tools
 RUN apt-get install -y \
-    python3 \
-    python3-pip \
-    python3-setuptools \
+    python3.6 \
+    python3.6-pip \
+    python3.6-setuptools \
     nodejs \
     build-essential \
     libzmq3-dev \
