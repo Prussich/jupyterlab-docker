@@ -65,7 +65,6 @@ RUN pip3 install \
   setuptools==41.0.0 \
   librosa \
   matplotlib \
-  opencv-python \
   pillow \
   pandas \
   ipympl \
